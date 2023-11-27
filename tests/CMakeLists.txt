@@ -11,15 +11,13 @@ endif()
 
 add_executable(ecpp_endian_ut src/00_byteswap.cpp src/01_ntoh_hton.cpp)
 target_include_directories(ecpp_endian_ut PUBLIC include)
-target_link_libraries(ecpp_endian_ut ecpp_endian gtest_main)
+target_link_libraries(ecpp_endian_ut ecpp::endian gtest_main)
 target_compile_options(ecpp_endian_ut PUBLIC -pthread)
 target_link_options(ecpp_endian_ut PUBLIC -pthread)
 
 target_compile_options(
   ecpp_endian_ut
-  PUBLIC 
-  
-         -Wall
+  PUBLIC -Wall
          -Wextra
          -pedantic
          -Wconversion

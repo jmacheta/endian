@@ -5,6 +5,8 @@ set(CMAKE_CXX_STANDARD 20)
 set(CXX_STANDARD_REQUIRED ON)
 
 add_library(ecpp_endian INTERFACE)
+add_library(ecpp::endian ALIAS ecpp_endian)
+
 target_include_directories(ecpp_endian INTERFACE include)
 
 if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
