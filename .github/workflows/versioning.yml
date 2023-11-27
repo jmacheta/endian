@@ -7,7 +7,7 @@ on:
       - edited
 
 jobs:
-  actions-tagger:
+  update-latest-tag:
     runs-on: ubuntu-latest
     permissions:
       contents: write
