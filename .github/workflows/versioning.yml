@@ -1,17 +1,26 @@
-name: Keep the versions up-to-date
+name: "Tag latest release of action tagger ⚡"
 
 on:
   release:
     types:
       - released
       - edited
+  push:
+    tags:
+      - "v?[0-9]+.[0-9]+.[0-9]+"
+    branches-ignore:
+      - "**"
+    paths-ignore:
+      - "**"
 
 jobs:
   actions-tagger:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
+      - uses: actions/checkout@v4
       - uses: Actions-R-Us/actions-tagger@v2
         with:
           publish_latest_tag: true
+          prefer_branch_releases: false
