@@ -1,4 +1,4 @@
-name: "Tag latest release of action tagger ⚡"
+name: Keep the versions up-to-date
 
 on:
   release:
@@ -19,8 +19,6 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: Actions-R-Us/actions-tagger@v2
+      - uses: Actions-R-Us/actions-tagger@v2.0.3
         with:
           publish_latest_tag: true
-          prefer_branch_releases: false
