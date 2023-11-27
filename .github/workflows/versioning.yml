@@ -1,4 +1,4 @@
-name: Keep the versions up-to-date
+name: Update latest tag
 
 on:
   release:
@@ -12,6 +12,4 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: Actions-R-Us/actions-tagger@v2
-        with:
-          publish_latest_tag: true
+      - uses: EndBug/latest-tag@latest
