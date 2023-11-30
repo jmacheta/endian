@@ -18,7 +18,7 @@ template <std::integral T> [[nodiscard]] constexpr T byteswap(T value) noexcept 
   return std::bit_cast<T>(value_representation);
 }
 #else
-template <std::integral T> [[nodiscard]] inline T byteswap(T value) noexcept {
+template <std::integral T> [[nodiscard]] constexpr T byteswap(T value) noexcept {
   alignas(T) std::array<std::byte, sizeof(T)> value_representation;
   std::memcpy(value_representation.data(), &value, sizeof(value));
   std::ranges::reverse_copy(value_representation, reinterpret_cast<std::byte *>(&value));
