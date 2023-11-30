@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
 
-project(ecpp_endian LANGUAGES CXX VERSION 1.0.0)
+project(ecpp_endian LANGUAGES CXX VERSION 1.0.1)
 
 option(CONFIG_ECPP_ENDIAN_BUILD_TESTS "Forces building test cases" OFF)
 option(CONFIG_ECPP_ENDIAN_BUILD_EXAMPLES "Forces building examples" OFF)
