@@ -2,12 +2,10 @@
 #define ECPP_ENDIAN_HPP__
 
 #include <algorithm>
+#include <array>
 #include <bit>
 #include <concepts>
 #include <cstring>
-#include <iterator>
-#include <type_traits>
-
 namespace ecpp {
 
 #ifdef __cpp_lib_byteswap
