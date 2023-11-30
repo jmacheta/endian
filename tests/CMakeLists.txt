@@ -3,8 +3,9 @@ cmake_policy(SET CMP0135 NEW)
 include(FetchContent)
 
 FetchContent_Declare(
-  googletest URL https://github.com/google/googletest/archive/main.zip
-                 FIND_PACKAGE_ARGS NAMES GTest)
+  googletest URL https://github.com/google/googletest/archive/main.zip FIND_PACKAGE_ARGS NAMES
+                 GTest
+)
 FetchContent_MakeAvailable(googletest)
 
 add_executable(ecpp_endian_ut byteswap.cpp ntoh_hton.cpp)
@@ -19,7 +20,6 @@ target_compile_options(
           -Wextra
           -pedantic
           -Wconversion
-          -Wimplicit
           -Winit-self
           -Wcast-qual
           -Wcast-align
@@ -31,7 +31,7 @@ target_compile_options(
           -Wmissing-declarations
           -Wdisabled-optimization
           -Wold-style-cast
-          -Wno-gnu-zero-variadic-macro-arguments)
+)
 
 include(GoogleTest)
 
