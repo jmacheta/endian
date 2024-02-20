@@ -16,7 +16,6 @@ target_compile_features(endian INTERFACE cxx_std_20)
 add_library(ecpp::endian ALIAS endian)
 
 if (PROJECT_IS_TOP_LEVEL OR ENDIAN_BUILD_INSTALL)
-  enable_testing()
   include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/install.cmake)
 endif ()
 
