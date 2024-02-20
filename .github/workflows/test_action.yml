@@ -11,10 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: lukka/get-cmake@latest
-      - uses: actions/checkout@v3
+      
+      - uses: actions/checkout@v4
+
       - name: Configure
-        run: cmake -B build -G Ninja
-      - name: Build
-        run: cmake --build build -t all
+        run: cmake --preset default
+
+      - name: Build tests
+        run: cmake --build --preset testing
+
       - name: Test
-        run: ctest --test-dir build
+        run: ctest --preset default
+
+      - name: Install
+        run: cmake --build --preset install

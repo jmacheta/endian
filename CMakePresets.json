@@ -38,7 +38,7 @@
     ],
     "testPresets": [
         {
-            "name": "testing",
+            "name": "default",
             "configurePreset": "default",
             "output": {
                 "outputOnFailure": true
