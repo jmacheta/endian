@@ -1,6 +1,6 @@
 include(CMakePackageConfigHelpers)
 
-set(CMAKES_EXPORT_DIR cmake/endian)
+set(CMAKES_EXPORT_DIR cmake)
 
 write_basic_package_version_file(endian-version.cmake COMPATIBILITY SameMajorVersion)
 
