@@ -5,6 +5,8 @@ C++20 Endianness conversion library
 
 [![C++ CI](https://github.com/jmacheta/endian/actions/workflows/test_action.yml/badge.svg)](https://github.com/jmacheta/endian/actions/workflows/test_action.yml)
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a1a915a6d2bc42f99dfea02067485869)](https://app.codacy.com/gh/jmacheta/endian/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+
 ## Installation
 
 The easiest way is to use built-in CMake FetchContent:
