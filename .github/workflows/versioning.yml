@@ -13,4 +13,4 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - uses: EndBug/latest-tag@latest
+      - uses: EndBug/latest-tag@v1.6.2
