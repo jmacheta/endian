@@ -23,11 +23,5 @@ jobs:
       - name: Test
         run: ctest --preset default
 
-      - name: Upload coverage report
-        uses: codacy/codacy-coverage-reporter-action@v1.3.0
-        with:
-          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          coverage-reports: build/tests/CMakeFiles/*.gcda
-          
       - name: Install
         run: cmake --build --preset install

@@ -24,6 +24,6 @@ if (PROJECT_IS_TOP_LEVEL OR ENDIAN_BUILD_EXAMPLES)
 endif ()
 
 if (PROJECT_IS_TOP_LEVEL OR ENDIAN_BUILD_TESTS)
-  enable_testing()
+  include(CTest)
   add_subdirectory(tests EXCLUDE_FROM_ALL)
 endif ()

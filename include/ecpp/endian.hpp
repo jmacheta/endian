@@ -9,7 +9,7 @@
 namespace ecpp {
 
 #ifdef __cpp_lib_byteswap
-using byteswap = std::byteswap;
+using std::byteswap;
 #else
 #ifdef __cpp_lib_bit_cast
 template <std::integral T> [[nodiscard]] constexpr T byteswap(T value) noexcept {
