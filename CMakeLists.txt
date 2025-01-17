@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(endian LANGUAGES CXX VERSION 1.0.3)
+project(endian LANGUAGES CXX VERSION 1.0.4)
 
 option(ENDIAN_BUILD_TESTS "Configure unit tests target" OFF)
 option(ENDIAN_BUILD_EXAMPLES "Configure examples target" OFF)
