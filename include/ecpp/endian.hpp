@@ -8,10 +8,9 @@
 #include <cstring>
 namespace ecpp {
 
-#ifdef __cpp_lib_byteswap
+#if __cpp_lib_byteswap >= 202110L
 using std::byteswap;
-#else
-#ifdef __cpp_lib_bit_cast
+#elif __cpp_lib_bit_cast >= 201806L
 template <std::integral T> [[nodiscard]] constexpr T byteswap(T value) noexcept {
   auto value_representation = std::bit_cast<std::array<std::byte, sizeof(T)>>(value);
   std::ranges::reverse(value_representation);
@@ -24,7 +23,6 @@ template <std::integral T> [[nodiscard]] constexpr T byteswap(T value) noexcept 
   std::ranges::reverse_copy(value_representation, reinterpret_cast<std::byte *>(&value));
   return value;
 }
-#endif
 #endif
 
 /**
